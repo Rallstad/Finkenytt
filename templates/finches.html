@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<ul id="services-list">
+<li>
+  <a href="http://www.google.com" class="image">
+      {% load static %}
+      <img src="{% static 'blog/images/finches/finch1' %}" alt="My image">
+  </a>
+  <div class="content">
+    <h3>Header</h3>
+    <p>text goes here</p>
+  </div>
+</li>
+<li>
+  <a href="http://www.google.com" class="image">
+    <img src="http://cdn1.iconfinder.com/data/icons/socialmediaicons_v120/24/facebook.png" alt="Facebook Icon" />
+  </a>
+  <div class="content">
+  <h3>Header</h3>
+  <p>text goes here</p>
+  </div>
+</li>
+</ul>
+
+
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<style>
+    body {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        background-color: #fdfdfd;
+    }
+
+
+    .about {
+        box-shadow: 0 16px 48px #E3E7EB;
+    }
+</style>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 about mb-4  mt-3 left  top">
+      <div class="about-body">
+      {% for elem in about_list %}
+        <h1>{% block title %} {{ elem.title }} {% endblock title %}</h1>
+        <p class="about-text ">{{ elem.content | safe }}</p>
+      </div>
+    {% endfor %}
+    </div>
+    {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+  </div>
+</div>
+
+{% endblock content %}
